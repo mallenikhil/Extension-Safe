@@ -16,7 +16,7 @@ export default function Home() {
     setError('')
     try {
       const response = await fetch(
-        `http://localhost:8000/analyze?url=${encodeURIComponent(url)}`,
+        `${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000'}/analyze?url=${encodeURIComponent(url)}`,
         {
           method: 'POST',
           signal: AbortSignal.timeout(60000),
