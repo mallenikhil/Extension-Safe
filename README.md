@@ -21,33 +21,6 @@ A Chrome extension security analyzer. Paste any Chrome Web Store URL and get a p
 | AI | Groq API — `llama-3.3-70b-versatile` |
 | Extension parsing | CRX download + ZIP extraction |
 
-## Running locally
-
-**Backend**
-
-```bash
-# Install dependencies
-pip install fastapi uvicorn groq python-dotenv requests
-
-# Add your Groq API key
-echo "GROQ_API_KEY=your_key_here" > .env
-
-# Start the server
-uvicorn main:app --reload
-```
-
-**Frontend**
-
-```bash
-cd extension-safe-frontend
-npm install
-npm run dev
-```
-
-The frontend runs at `http://localhost:3000` and calls the backend at `http://localhost:8000`.
-
-Get a free Groq API key at [console.groq.com](https://console.groq.com).
-
 ## Project structure
 
 ```
